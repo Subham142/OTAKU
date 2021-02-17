@@ -3,7 +3,7 @@ import { useDispatch,useSelector } from 'react-redux';
 import { Col, Row } from 'react-bootstrap'
 import Product from '../components/Product'
 import loader from '../components/loader'
-import message from '../components/message'
+import message from '../components/Message'
 import { listProducts } from '../actions/productActions';
 const HomeScreens = () => {
     const dispatch = useDispatch()

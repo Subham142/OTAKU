@@ -4,7 +4,7 @@ import { useDispatch,useSelector} from 'react-redux';
 import { Row,Col,Image,ListGroup,Button, Form } from 'react-bootstrap';
 import Rating from '../components/Rating';
 import loader from '../components/loader'
-import message from '../components/message' 
+import message from '../components/Message' 
 
 import { listProductDetails } from '../actions/productActions';
 const ProductScreen = ({match,history}) => {

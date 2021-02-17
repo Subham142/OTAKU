@@ -3,6 +3,7 @@ import dotenv from 'dotenv'
 import connectDB from'./config/db.js'
 import productRoutes from './routes/productRoutes.js'
 import { errorHandler, notFound } from './middleware/errorMiddleware.js'
+import colors from 'colors'
 
 dotenv.config()
 connectDB()

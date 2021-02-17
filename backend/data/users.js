@@ -1,23 +1,22 @@
 import bcrypt from 'bcryptjs'
 
-const users=[
-    {
-        name:'Admin User',
-        email:'admin@example.com',
-        //this library is for random passwords (key ,length)
-        password:bcrypt.hashSync('12345',10),
-        isAdmin:true,
-    },
-    {
-        name:'Ram Turi',
-        email:'ram@example.com',
-        password:bcrypt.hashSync('12345',10),
-    },
-    {
-        name:'Sam Turi',
-        email:'sam@example.com',
-        password:bcrypt.hashSync('12345',10),
-    },
+const users = [
+  {
+    name: 'Admin User',
+    email: 'admin@example.com',
+    password: bcrypt.hashSync('123456', 10),
+    isAdmin: true,
+  },
+  {
+    name: 'John Doe',
+    email: 'john@example.com',
+    password: bcrypt.hashSync('123456', 10),
+  },
+  {
+    name: 'Jane Doe',
+    email: 'Jane@example.com',
+    password: bcrypt.hashSync('123456', 10),
+  },
 ]
 
-export default users;
+export default users

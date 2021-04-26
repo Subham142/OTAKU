@@ -16,6 +16,10 @@ const Header = () => {
     dispatch(logout())
   }
   const navDropdownAdmin = (<i class="fas fa-user-shield">  Admin</i>)
+  let demo =""
+  if(userInfo){
+     demo = (<i class="fas fa-user"> {userInfo.name}</i>)
+  }
   return (
     <header>
       <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
@@ -32,8 +36,8 @@ const Header = () => {
                   <i className='fas fa-shopping-cart'></i> Cart
                 </Nav.Link>
               </LinkContainer>
-              {userInfo ? (
-                <NavDropdown title={userInfo.name} id='username'>
+              {userInfo ? (           
+                <NavDropdown title={demo} id='username'>
                   <LinkContainer to='/profile'>
                     <NavDropdown.Item><i class="fas fa-user-edit"></i>  Profile</NavDropdown.Item>
                   </LinkContainer>
@@ -41,6 +45,7 @@ const Header = () => {
                   <i class="fas fa-sign-out-alt"></i>  Logout
                   </NavDropdown.Item>
                 </NavDropdown>
+               
               ) : (
                 <LinkContainer to='/login'>
                   <Nav.Link>

@@ -15,7 +15,7 @@ const Header = () => {
   const logoutHandler = () => {
     dispatch(logout())
   }
-
+  const navDropdownAdmin = (<i class="fas fa-user-shield">  Admin</i>)
   return (
     <header>
       <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
@@ -35,10 +35,10 @@ const Header = () => {
               {userInfo ? (
                 <NavDropdown title={userInfo.name} id='username'>
                   <LinkContainer to='/profile'>
-                    <NavDropdown.Item>Profile</NavDropdown.Item>
+                    <NavDropdown.Item><i class="fas fa-user-edit"></i>  Profile</NavDropdown.Item>
                   </LinkContainer>
                   <NavDropdown.Item onClick={logoutHandler}>
-                    Logout
+                  <i class="fas fa-sign-out-alt"></i>  Logout
                   </NavDropdown.Item>
                 </NavDropdown>
               ) : (
@@ -49,15 +49,15 @@ const Header = () => {
                 </LinkContainer>
               )}
                {userInfo && userInfo.isAdmin && (
-                <NavDropdown title='Admin' id='adminmenu'>
+                <NavDropdown title={navDropdownAdmin} id='adminmenu'>
                   <LinkContainer to='/admin/userlist'>
-                    <NavDropdown.Item>Users</NavDropdown.Item>
+                    <NavDropdown.Item><i class="fas fa-users"></i> Users</NavDropdown.Item>
                   </LinkContainer>
                   <LinkContainer to='/admin/productlist'>
-                    <NavDropdown.Item>Products</NavDropdown.Item>
+                    <NavDropdown.Item><i class="fas fa-box-open"></i>  Products</NavDropdown.Item>
                   </LinkContainer>
                   <LinkContainer to='/admin/orderlist'>
-                    <NavDropdown.Item>Orders</NavDropdown.Item>
+                    <NavDropdown.Item><i class="fas fa-receipt"></i>  Orders</NavDropdown.Item>
                   </LinkContainer>
                 </NavDropdown>
               )}

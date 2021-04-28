@@ -29,7 +29,7 @@ h2 {
 }
 .carousel-caption {
   position: absolute;
-  top: 290px
+  top: 239px
 }
 
 .carousel-caption h2 {
@@ -43,6 +43,7 @@ h2 {
   /* border-radius: 50%; */
   margin-left: auto;
   margin-right: auto;
+  margin-top: -10px;
 }
 .carousel a {
   margin: 0 auto;
@@ -69,4 +70,8 @@ h2 {
 }
 .div-text > a :hover {
  color: yellow;
+}
+
+.gap{
+  margin-top: 50px;
 }

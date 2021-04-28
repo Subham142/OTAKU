@@ -21,7 +21,7 @@ const Header = () => {
      demo = (<i class="fas fa-user"> {userInfo.name}</i>)
   }
   return (
-    <header>
+    <header  style={{marginBottom:"50px"}}>
       <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect fixed="top" >
         <Container>
           <LinkContainer to='/'>

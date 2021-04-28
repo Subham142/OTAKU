@@ -3,7 +3,7 @@ ul {
     padding: 0px;
 }
 .footer-section {
-    background: #800000;
+    background: #332929;
     position: relative;
 }
 .footer-cta {
@@ -86,22 +86,22 @@ ul {
     color: #fff;
     font-size: 20px;
     font-weight: 600;
-    margin-bottom: 40px;
+    margin-bottom: 8px;
     position: relative;
 }
 .footer-widget-heading h3::before {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -15px;
+    bottom: 6px;
     height: 2px;
-    width: 50px;
+    width: 76px;
     background: #ff5e14;
 }
 .footer-widget ul li {
     display: inline-block;
     float: left;
-    width: 50%;
+    width: 34%;
     margin-bottom: 12px;
 }
 .footer-widget ul li a:hover {
@@ -116,17 +116,20 @@ ul {
     overflow: hidden;
 }
 .subscribe-form input {
-    width: 100%;
-    padding: 14px 28px;
-    background: #2e2e2e;
-    border: 1px solid #2e2e2e;
-    color: #fff;
+  
+        width: 100%;
+        padding: 6px 15px;
+        background: #2e2e2e;
+        border: 1px solid #2e2e2e;
+        color: #fff;
+        margin-bottom: 13px;
+    
 }
 .subscribe-form button {
     position: absolute;
     right: 0;
     background: #ff5e14;
-    padding: 13px 20px;
+    padding: 4px 16px;
     border: 1px solid #ff5e14;
     top: 0;
 }

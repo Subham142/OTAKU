@@ -8,7 +8,7 @@ function Footer() {
     return (
         <footer className="footer-section">
             <div className="container">
-                <div className="footer-cta pt-5 pb-5">
+                <div className="footer-cta">
                     <div className="row">
                         <div className="col-xl-4 col-md-4 mb-30">
                             <div className="single-cta">
@@ -39,7 +39,7 @@ function Footer() {
                         </div>
                     </div>
                 </div>
-                <div className="footer-content pt-5 pb-5">
+                <div className="footer-content">
                     <div className="row">
                         <div className="col-xl-4 col-lg-4 mb-50">
                             <div className="footer-widget">
@@ -50,21 +50,21 @@ function Footer() {
                                 </div>
                                 <div className="footer-text">
                                     <p>
-                                        Kurakoo is an online community of people
-                                        providing answers to scholl-college
-                                        students.
+                                        Get high sdanousdfusdbf
+                                        sdnfousfubsdlfbsd;fubds;
+                                        sboussoifnsoi
                                     </p>
                                 </div>
                                 <div className="footer-social-icon">
                                     <span>Follow us</span>
                                     <a href="/#">
-                                        <i className="fa fa-facebook-f facebook-bg"></i>
+                                    <i class="fab fa-facebook" style={{fontSize:"32px"}}></i>
                                     </a>
                                     <a href="/#">
-                                        <i className="fa fa-twitter twitter-bg"></i>
+                                    <i class="fab fa-twitter" style={{fontSize:"32px"}}></i>
                                     </a>
                                     <a href="/#">
-                                        <i className="fa fa-instagram instagram-bg"></i>
+                                    <i class="fab fa-instagram" style={{fontSize:"32px"}}></i>
                                     </a>
                                 </div>
                             </div>
@@ -80,7 +80,7 @@ function Footer() {
                                         <a href="/">Home</a>
                                     </li>
                                     <li>
-                                        <a href="/feed">Feed</a>
+                                        <a href="/feed">Cart</a>
                                     </li>
                                     <li>
                                         <a href="/aboutus">About us</a>
@@ -110,7 +110,7 @@ function Footer() {
                                             placeholder="Email Address"
                                         />
                                         <button>
-                                            <i className="fa fa-telegram fa-5x"></i>
+                                        <i class="fab fa-telegram-plane"></i>
                                         </button>
                                     </form>
                                 </div>
@@ -125,7 +125,7 @@ function Footer() {
                         <div className="col-xl-6 col-lg-6 text-center text-lg-left">
                             <div className="copyright-text">
                                 <p>
-                                    &copy; 2021 KURAKOO | All Right Reserved |
+                                    &copy; Otaku | All Right Reserved |
                                     Terms Of Service | Privacy
                                 </p>
                             </div>

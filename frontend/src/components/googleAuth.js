@@ -4,25 +4,24 @@ import axios from "axios";
 import { login,register } from "../actions/userActions";
 import { useDispatch } from "react-redux";
 
-//'641909577010-h792ei2m2sc1ku021ami01smkh8hcs0e.apps.googleusercontent.com';
 const {data: clientId} =  axios.get('/api/config/google');
 
 function Login() {
-  //  const [clientId, setClientId]=useState("")
+   const [clientId, setClientId]=useState("")
 
    const dispatch = useDispatch()
    console.log(clientId)
 
-  //  useEffect(() => {
-  //   const fetchId = async () => {
-  //     const {data} = await axios.get('/api/config/google');
-  //     setClientId(data)
-  //     console.log("clientId  ")
-  //     console.log(clientId)
-  //     }
-  //     fetchId()
+   useEffect(() => {
+    const fetchId = async () => {
+      const {data} = await axios.get('/api/config/google');
+      setClientId(data)
+      console.log("clientId  ")
+      console.log(clientId)
+      }
+      fetchId()
      
-  // })
+  })
  
 
   const onSuccess = async (res) => {

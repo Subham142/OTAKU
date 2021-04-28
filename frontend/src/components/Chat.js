@@ -29,50 +29,154 @@ const theme = {
 const steps = [
   {
     id: 'intro',
-    message: 'Hi! how may I help you?',
+    message: 'Hey Anime Fan 😄😄!! How can I help you?',
      trigger:2
   },
   {
     id: '2',
    
     options: [
-      { value: 1, label: 'My Orders', trigger: 'my orders' },
-      { value: 2, label: 'Return Product', trigger: 'return products' },
+      { value: 1, label: 'Help Me find something good ', trigger: 'sg' },
+      { value: 2, label: 'NAh! Just looking around', trigger: 'persueade' },
       { value: 3, label: 'Others', trigger: 'others-1' },
     ],
   },
   {
-    id: 'return products',
-    message: 'return products',
-    trigger: '2',
+    id: 'sg',
+    message: ' Whick type of animes do you prefer? ',
+    trigger: 'sg2',
+  },
+  {
+    id: 'sg2',
+   
+    options: [
+      { value: 1, label: 'Shoenen', trigger: 'Shoenen' },
+      { value: 2, label: 'funny/action', trigger: 'persueade' },
+      { value: 3, label: 'Surprise Me', trigger: 'others-1' },
+    ],
+  },
+  {
+    id: 'Shoenen',
+    component: (
+      <div  style={{color:"black"}} className="div-text"> I recommend you to watch 1)<a style ={{color:"red"}} href="/product/6085b2fac2c5ae17c4aefd67" >  Jujutsu Kaisen</a> 2)<a style ={{color:"red"}} href="/product/6085b560c2c5ae17c4aefd6c">Demon Slayer: Kimetsu no Yaiba</a> . PS we have it om Blu-Ray </div>
+    ),
+    trigger: 'wnm'
+  },
+  {
+    id: 'wnm',
+    message: 'Do you need more recommendations? ',
+    trigger: 'c2',
+  },
+  {
+    id: 'c2',
+    options: [
+      { value: 1, label: 'Yeah I would prefer more option', trigger: 'Shoenen2' },
+      { value: 2, label: 'No. Arigato! ', trigger:'Arigato' },
+    ],
+  },
+  {
+    id: 'Arigato',
+    message: 'I see you are a man of culture of culture as well ',
+    
+    trigger: 'Arigato-2',
+  },
+  {
+    id: 'Arigato-2',
+    component: (
+      <div>do itashimashite(Welcome)</div>
+    ),
+    
+    end :true,
+  },
+  {
+    id: 'Shoenen2',
+    component: (
+      <div> I recommend you to watch 3)<a href="/product/6085b3fac2c5ae17c4aefd69">One Piece</a> 4)<a href="/product/6085a41f438e33313815dd71">Naruto: Shippûden</a> </div>
+    ),
+    trigger: 'wnm'
+  },
+  {
+    id: 'persueade',
+    message: 'OK, Have fun      Do you know about the guy whose deafeats every villan in just ONE punch? ',
+    trigger: 'p2',
+  },
+  {
+    id: 'p2',
+    options: [
+      { value: 1, label: 'No!!', trigger: 'opm' },
+      { value: 2, label: 'Yeah I love that anime ', trigger: 'step-2' },
+    ],
+  },
+  {
+    id: 'step-2',
+    message: 'I can sugeest you more animes like that ',
+    trigger: 'step-3',
+  },
+  {
+    id: 'step-3',
+    options: [
+      { value: 1, label: 'Yeah. Please do', trigger: 'Dbzs' },
+      { value: 2, label: 'I wanna try something new', trigger: 'food' },
+    ],
+  },
+  {
+    id: 'Dbzs',
+    component: (
+      <div> Here is one. How the protagnist get god-like powers "Dragon Ball Z Super". PS we have it om Blu-Ray   <a href="/product/6085a666438e33313815dd74">Have a look</a> </div>
+    ),
+    asMessage: true,
+    end: true,
+  },
+  {
+    id: 'food',
+    component: (
+      <div> How about anime on FOOD "Food Wars!". PS we have it om Blu-Ray   <a href="/product/6085b289c2c5ae17c4aefd66">Have a look</a> </div>
+    ),
+    asMessage: true,
+    end: true,
+  },
+  {
+    id: 'opm',
+    component: (
+      <div> His name is Saitama.He is from "ONE PUNCH MAN". PS we have it om Blu-Ray   <a href="/product/6085a472438e33313815dd72">Have a look</a> </div>
+    ),
+    asMessage: true,
+    end: true,
   },
   {
     id: 'my orders',
-    message: 'Here for you!',
+    component: (
+      <div> PLease click here  <a href="/profile">Have a look</a> </div>
+    ),
+    asMessage: true,
     end: true,
   },
   {
     id: 'others-1',
     options: [
-      { value: 1, label: 'Payment', trigger: 'payment' },
+      { value: 1, label: 'Edit Profile', trigger: 'edit profile' },
       { value: 2, label: 'Track My Order', trigger: 'track order' },
-      { value: 3, label: 'Edit Profile', trigger: 'edit profile' },
+      { value: 3, label: 'About Us', trigger: 'payment' },
+      
     ],
   },
   {
     id: 'payment',
-    message: 'return products',
-    trigger: '2',
+    message: 'You can follow our FB, Insta for more info',
+    end:true,
   },
   {
     id: 'track order',
-    message: 'return products',
-    trigger: '2',
+    message: 'All the detail will be sent to you',
+    end:true,
   },
   {
     id: 'edit profile',
-    message: 'return products',
-    trigger: '2',
+    component: (
+      <div> If Signed In PLease click here  <a href="/profile">Have a look</a> </div>
+    ),
+    asMessage: true,
+    end:true,
   },
 ];
 class Chat extends Component {
@@ -82,7 +186,7 @@ class Chat extends Component {
     return (
       <ThemeProvider theme={theme}>
       <ChatBot
-      headerTitle="Here For You"
+      headerTitle="I'm Animax 🤖"
       
       steps={steps} 
       {...config}

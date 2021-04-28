@@ -29,7 +29,7 @@ h2 {
 }
 .carousel-caption {
   position: absolute;
-  top: 0;
+  top: 290px
 }
 
 .carousel-caption h2 {
@@ -40,7 +40,7 @@ h2 {
   height: 300px;
   padding: 30px;
   margin: 40px;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   margin-left: auto;
   margin-right: auto;
 }
@@ -54,5 +54,19 @@ h2 {
 }
 
 .cardImg{
-  height: 150px;
+  height: 248px;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 3px;
+}
+
+.div-text{
+  color:"red";
+  
+}
+.div-text > a :hover {
+ color: yellow;
 }

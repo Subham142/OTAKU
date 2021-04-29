@@ -1,33 +1,23 @@
-import React,{useEffect,useState} from 'react';
+import React,{useState} from 'react';
 import { GoogleLogin } from 'react-google-login';
 import axios from "axios";
 import { login,register } from "../actions/userActions";
 import { useDispatch } from "react-redux";
+import config from "../config.json"
 
-const {data: clientId} =  axios.get('/api/config/google');
+
+const clientId=config.GOOGLE_CLIENT_ID
 
 function Login() {
-   const [clientId, setClientId]=useState("")
-
-   const dispatch = useDispatch()
-   console.log(clientId)
-
-   useEffect(() => {
-    const fetchId = async () => {
-      const {data} = await axios.get('/api/config/google');
-      setClientId(data)
-      console.log("clientId  ")
-      console.log(clientId)
-      }
-      fetchId()
-     
-  })
- 
-
-  const onSuccess = async (res) => {
+  const [isLoggedIn,setIsLoggedIn]=useState(false);
+    
+  const dispatch = useDispatch()
+  
+  
+    const onSuccess = async (res) => {
     const user= res.profileObj;
     const {name ,email} =user;
-     const password= "12345"; 
+     const password= config.AUTH_PASSWORD; 
      const {data} = await axios.get(`/api/users/${email}`)
      console.log("data");
      console.log(data);
@@ -36,6 +26,7 @@ function Login() {
     }else{
       dispatch(register(name, email, password))
     }
+    setIsLoggedIn(true)
   };
 
   const onFailure = (res) => {
@@ -44,8 +35,11 @@ function Login() {
 
   return (
     <div>
-      <GoogleLogin
+       <GoogleLogin
         clientId={clientId}
+        render={renderProps => (
+          <button onClick={renderProps.onClick} disabled={renderProps.disabled}>This is my custom Google button</button>
+        )}
         buttonText="Login"
         onSuccess={onSuccess}
         onFailure={onFailure}

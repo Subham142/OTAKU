@@ -32,6 +32,7 @@ const LoginScreen = ({ location, history }) => {
   return (
     <FormContainer>
       <h1>Sign In</h1>
+      <Row><img src ="https://68.media.tumblr.com/tumblr_mbh6sdIcog1rn98vpo1_500.gif"/></Row>
       {error && <Message variant='danger'>{error}</Message>}
       {loading && <Loader />}
       <Form onSubmit={submitHandler}>
@@ -59,7 +60,7 @@ const LoginScreen = ({ location, history }) => {
           Sign In
         </Button>
       </Form>
-
+    
       <Row className='py-3'>
         <Col>
           New Customer?{' '}
@@ -68,6 +69,7 @@ const LoginScreen = ({ location, history }) => {
           </Link>
         </Col>
       </Row>
+   
     </FormContainer>
   )
 }

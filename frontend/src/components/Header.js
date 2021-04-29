@@ -5,6 +5,7 @@ import { LinkContainer } from 'react-router-bootstrap'
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap'
 import SearchBox from './SearchBox'
 import { logout } from '../actions/userActions'
+import Logo from '../logo.png'
 
 const Header = () => {
   const dispatch = useDispatch()
@@ -25,7 +26,10 @@ const Header = () => {
       <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect fixed="top" >
         <Container>
           <LinkContainer to='/'>
-            <Navbar.Brand>ProShop</Navbar.Brand>
+            <Navbar.Brand>
+         <h4>🅾🆃🅰🅺🆄</h4>
+           
+            </Navbar.Brand>
           </LinkContainer>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>

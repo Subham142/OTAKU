@@ -74,7 +74,7 @@ const LoginScreen = ({ location, history }) => {
       </Row>
       
     </FormContainer>
-    {/* <GoogleAuth/> */}
+    <GoogleAuth/>
     </>
     
   )

@@ -4,6 +4,7 @@ import { Form, Button, Row, Col } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
+import GoogleAuth from '../components/googleAuth'
 import FormContainer from '../components/FormContainer'
 import { login } from '../actions/userActions'
 
@@ -23,13 +24,14 @@ const LoginScreen = ({ location, history }) => {
       history.push(redirect)
     }
   }, [history, userInfo, redirect])
-
+ 
   const submitHandler = (e) => {
     e.preventDefault()
     dispatch(login(email, password))
   }
 
   return (
+    <>
     <FormContainer>
       <h1>Sign In</h1>
       {error && <Message variant='danger'>{error}</Message>}
@@ -67,8 +69,14 @@ const LoginScreen = ({ location, history }) => {
             Register
           </Link>
         </Col>
+        <Col>
+        </Col>
       </Row>
+      
     </FormContainer>
+    {/* <GoogleAuth/> */}
+    </>
+    
   )
 }
 

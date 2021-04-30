@@ -9,8 +9,7 @@ import config from "../config.json"
 const clientId=config.GOOGLE_CLIENT_ID
 
 function Login() {
-  const [isLoggedIn,setIsLoggedIn]=useState(false);
-    
+      
   const dispatch = useDispatch()
   
   
@@ -26,8 +25,7 @@ function Login() {
     }else{
       dispatch(register(name, email, password))
     }
-    setIsLoggedIn(true)
-  };
+     };
 
   const onFailure = (res) => {
     console.log('Login failed: res:', res);

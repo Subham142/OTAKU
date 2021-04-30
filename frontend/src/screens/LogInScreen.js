@@ -6,6 +6,7 @@ import Message from '../components/Message'
 import Loader from '../components/Loader'
 import FormContainer from '../components/FormContainer'
 import { login } from '../actions/userActions'
+import Goku from '../pics/goku.png'
 
 const LoginScreen = ({ location, history }) => {
   const [email, setEmail] = useState('')
@@ -32,7 +33,7 @@ const LoginScreen = ({ location, history }) => {
   return (
     <FormContainer>
       <h1>Sign In</h1>
-      <Row><img src ="https://68.media.tumblr.com/tumblr_mbh6sdIcog1rn98vpo1_500.gif"/></Row>
+      
       {error && <Message variant='danger'>{error}</Message>}
       {loading && <Loader />}
       <Form onSubmit={submitHandler}>
@@ -69,7 +70,7 @@ const LoginScreen = ({ location, history }) => {
           </Link>
         </Col>
       </Row>
-   
+      <img src = {Goku} className="goku-img"/>
     </FormContainer>
   )
 }

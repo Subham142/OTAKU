@@ -1,5 +1,6 @@
 import React from "react";
 import "./footer.css";
+import Logo from '../pics/logo.png'
 //import "bootstrap/dist/css/bootstrap.min.css";
 //import "font-awesome/css/font-awesome.min.css";
 //import Logo from "../kurakoo-logo.png";
@@ -9,11 +10,15 @@ function Footer() {
         <footer className="footer-section">
             <div className="container">
                 <div className="footer-cta">
+              
                     <div className="row">
+                      
                         <div className="col-xl-4 col-md-4 mb-30">
                             <div className="single-cta">
+                         
                                 <i className="fa fa-map-marker"></i>
                                 <div className="cta-text">
+                               
                                     <h4>Find us</h4>
                                     <span>1010 Avenue, sw 54321, Delhi</span>
                                 </div>
@@ -45,7 +50,7 @@ function Footer() {
                             <div className="footer-widget">
                                 <div className="footer-logo">
                                     <a href="/">
-                                        {/* <img src={Logo} alt="logo" /> */}
+                                        <img src={Logo} alt="logo" className="logo-img"/>
                                     </a>
                                 </div>
                                 <div className="footer-text">

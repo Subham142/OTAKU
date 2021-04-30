@@ -26,6 +26,7 @@ const HomeScreen = ({ match }) => {
 
   return (
     <>
+    <div className="overlay"></div>
       <Meta />
       {!keyword ? (
         <ProductCarousel />

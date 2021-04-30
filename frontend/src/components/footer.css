@@ -43,9 +43,12 @@ ul {
 }
 .footer-logo {
     margin-bottom: 30px;
+    position: absolute;
+    right:100px
+
 }
 .footer-logo img {
-    max-width: 40%;
+width: 129px;
 }
 .footer-text p {
     margin-bottom: 14px;
@@ -160,4 +163,11 @@ ul {
 .footer-menu li a {
     font-size: 14px;
     color: #878787;
+}
+
+.logo-img {
+    position: absolute;
+    /* right: 221px; */
+    left: -423px;
+    top: -23px;
 }

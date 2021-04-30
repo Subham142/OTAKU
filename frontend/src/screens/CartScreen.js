@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Row, Col, ListGroup, Image, Form, Button, Card } from 'react-bootstrap'
 import Message from '../components/Message'
 import { addToCart, removeFromCart } from '../actions/cartActions'
-
+import Cart from '../pics/cart.png'
 const CartScreen = ({ match, location, history }) => {
   const productId = match.params.id
 
@@ -30,6 +30,7 @@ const CartScreen = ({ match, location, history }) => {
   }
 
   return (
+    <>
     <Row>
       <Col md={8}>
         <h1>Shopping Cart</h1>
@@ -40,7 +41,7 @@ const CartScreen = ({ match, location, history }) => {
         ) : (
           <ListGroup variant='flush'>
             {cartItems.map((item) => (
-              <ListGroup.Item key={item.product}>
+              <ListGroup.Item key={item.product} >
                 <Row>
                   <Col md={2}>
                     <Image src={item.image} alt={item.name} fluid rounded />
@@ -108,6 +109,8 @@ const CartScreen = ({ match, location, history }) => {
         </Card>
       </Col>
     </Row>
+    <img src = {Cart} className="cart-img"/>
+    </>
   )
 }
 

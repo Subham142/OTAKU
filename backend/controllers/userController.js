@@ -2,6 +2,20 @@ import asyncHandler from 'express-async-handler'
 import generateToken from '../utils/generateToken.js'
 import User from '../models/userModel.js'
 
+const checkUser = asyncHandler(async (req, res) => {
+  const email =req.params.email;
+  const user = await User.findOne({ email })
+  if(user){
+    res.json({
+      isPresent:true
+    })
+  }else{
+    res.json({
+      isPresent:false
+    })
+  }
+})
+
 // @desc    Auth user & get token
 // @route   POST /api/users/login
 // @access  Public
@@ -177,4 +191,5 @@ export {
   deleteUser,
   getUserById,
   updateUser,
+ checkUser
 }

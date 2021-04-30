@@ -11,6 +11,7 @@ import {
   productTopRatedReducer,
 } from './reducers/productReducers'
 import { cartReducer } from './reducers/cartReducers'
+import {googleReducer} from './reducers/googleAuthReducer'
 import {
   userLoginReducer,
   userRegisterReducer,
@@ -51,6 +52,7 @@ const reducer = combineReducers({
   orderDeliver: orderDeliverReducer,
   orderListMy: orderListMyReducer,
   orderList: orderListReducer,
+  googleReducer,
 })
 
 const cartItemsFromStorage = localStorage.getItem('cartItems')

@@ -38,7 +38,7 @@ function Footer() {
                                 <i className="fa fa-envelope-open"></i>
                                 <div className="cta-text">
                                     <h4>Mail us</h4>
-                                    <span>mail@info.com</span>
+                                    <span>subhamy142@gmail.com</span>
                                 </div>
                             </div>
                         </div>
@@ -55,9 +55,7 @@ function Footer() {
                                 </div>
                                 <div className="footer-text">
                                     <p>
-                                        Get high sdanousdfusdbf
-                                        sdnfousfubsdlfbsd;fubds;
-                                        sboussoifnsoi
+                                        Get high Quality,Official Mangas right at your door from OTAKU
                                     </p>
                                 </div>
                                 <div className="footer-social-icon">
@@ -85,10 +83,10 @@ function Footer() {
                                         <a href="/">Home</a>
                                     </li>
                                     <li>
-                                        <a href="/feed">Cart</a>
+                                        <a href="/cart">Cart</a>
                                     </li>
                                     <li>
-                                        <a href="/aboutus">About us</a>
+                                        <a href="/#">About us</a>
                                     </li>
                                     <li>
                                         <a href="/#">Contact us</a>

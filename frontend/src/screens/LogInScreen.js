@@ -62,6 +62,11 @@ const LoginScreen = ({ location, history }) => {
         <Button type='submit' variant='primary'>
           Sign In
         </Button>
+        <Button variant="link" disabled>Or</Button>
+      <Button variant="link"><GoogleAuth/></Button>
+ 
+     
+      
       </Form>
     
       <Row className='py-3'>
@@ -77,7 +82,7 @@ const LoginScreen = ({ location, history }) => {
       <img src = {Goku} className="goku-img"/>
       
     </FormContainer>
-    <GoogleAuth/>
+ 
     </>
     
   )

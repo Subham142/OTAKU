@@ -23,7 +23,7 @@ const Header = () => {
      demo = (<i class="fas fa-user"> {userInfo.name}</i>)
   }
   return (
-    <header  style={{marginBottom:"45.5px"}}>
+    <header  style={{marginBottom:"44.5px"}}>
       <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect fixed="top" >
         <Container>
           <LinkContainer to='/'>

@@ -144,7 +144,7 @@ const ProductEditScreen = ({ match, history }) => {
             </Form.Group>
 
             <Form.Group controlId='brand'>
-              <Form.Label>Brand</Form.Label>
+              <Form.Label>Artist</Form.Label>
               <Form.Control
                 type='text'
                 placeholder='Enter brand'

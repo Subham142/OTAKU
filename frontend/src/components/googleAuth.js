@@ -18,9 +18,7 @@ function Login() {
     const {name ,email} =user;
      const password= config.AUTH_PASSWORD; 
      const {data} = await axios.get(`/api/users/${email}`)
-     console.log("data");
-     console.log(data);
-    if( data.isPresent){
+        if( data.isPresent){
       dispatch(login(email, password))
     }else{
       dispatch(register(name, email, password))
@@ -35,10 +33,7 @@ function Login() {
     <div>
        <GoogleLogin
         clientId={clientId}
-        render={renderProps => (
-          <button onClick={renderProps.onClick} disabled={renderProps.disabled}>This is my custom Google button</button>
-        )}
-        buttonText="Login"
+         buttonText="Sign In/Sign Up"
         onSuccess={onSuccess}
         onFailure={onFailure}
         cookiePolicy={'single_host_origin'}

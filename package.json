@@ -4,6 +4,9 @@
   "description": "mern e_commerece_site",
   "main": "index.js",
   "type": "module",
+  "engines": {
+    "node": "14.15.4"
+  },
   "scripts": {
     "start": "node backend/server ",
     "server": "nodemon backend/server",

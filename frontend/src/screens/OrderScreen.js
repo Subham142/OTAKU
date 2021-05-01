@@ -4,8 +4,8 @@ import { PayPalButton } from 'react-paypal-button-v2'
 import { Link } from 'react-router-dom'
 import { Row, Col, ListGroup, Image, Card, Button } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
-import Message from '../components/Message'
-import Loader from '../components/Loader'
+import Message from '../components/message'
+import Loader from '../components/loader'
 import {
   getOrderDetails,
   payOrder,

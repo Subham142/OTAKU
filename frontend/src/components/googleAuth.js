@@ -17,7 +17,7 @@ function Login() {
     const user= res.profileObj;
     const {name ,email} =user;
      const password= config.AUTH_PASSWORD; 
-     const {data} = await axios.get(`/api/users/${email}`)
+     const {data} = await axios.get(`/api/users/googleauth/${email}`)
         if( data.isPresent){
       dispatch(login(email, password))
     }else{
@@ -26,7 +26,7 @@ function Login() {
      };
 
   const onFailure = (res) => {
-    console.log('Login failed: res:', res);
+    console.log('Login failed: res:', res); 
    };
 
   return (

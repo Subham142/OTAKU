@@ -18,7 +18,7 @@ router.route('/').post(registerUser).get(protect, admin, getUsers)
 router.post('/login', authUser)
 router.route('/profile').get(protect, getUserProfile)
 .put(protect,updateUserProfile)
-router.get('/:email',checkUser)
+router.get('/googleauth/:email',checkUser)
 router
   .route('/:id')
   .delete(protect, admin, deleteUser)

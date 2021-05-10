@@ -2,11 +2,6 @@
 
 An online e-commerce site to buy manga.
 
-![WhatsApp Image 2021-05-10 at 20 06 20 (1)](https://user-images.githubusercontent.com/64212940/117678996-86a05a80-b1cd-11eb-806a-e3fc8bcb8d3a.jpeg)
-
-![WhatsApp Image 2021-05-10 at 20 06 20](https://user-images.githubusercontent.com/64212940/117679122-9ddf4800-b1cd-11eb-98ec-36d48a1ac978.jpeg)
-
-![WhatsApp Image 2021-05-10 at 20 06 22](https://user-images.githubusercontent.com/64212940/117679188-acc5fa80-b1cd-11eb-9d47-7476e978956f.jpeg)
 
 ## Features
 
@@ -47,6 +42,8 @@ Express
 MongoDB database and the Mongoose ODM
 
 JWT authentication (JSON web tokens)
+
+Google auth
 
 PayPal API
 
@@ -99,27 +96,13 @@ npm run build
 
 There is a Heroku postbuild script, so if you push to Heroku, no need to build manually for deployment to Heroku
 
-### Seed Database
 
-You can use the following commands to seed the database with some sample users and products as well as destroy all data
+![WhatsApp Image 2021-05-10 at 20 06 20 (1)](https://user-images.githubusercontent.com/64212940/117678996-86a05a80-b1cd-11eb-806a-e3fc8bcb8d3a.jpeg)
 
-```
-# Import data
-npm run data:import
+![WhatsApp Image 2021-05-10 at 20 06 20](https://user-images.githubusercontent.com/64212940/117679122-9ddf4800-b1cd-11eb-98ec-36d48a1ac978.jpeg)
 
-# Destroy data
-npm run data:destroy
-```
+![WhatsApp Image 2021-05-10 at 20 06 22](https://user-images.githubusercontent.com/64212940/117679188-acc5fa80-b1cd-11eb-9d47-7476e978956f.jpeg)
 
-```
-Sample User Logins
+## Contribution
 
-admin@example.com (Admin)
-123456
-
-john@example.com (Customer)
-123456
-
-jane@example.com (Customer)
-123456
-
+If you want to contribute create an issue or mail to [subhamy142@gmail.com](subhamy142@gmail.com) or text me on [LinkedIn](https://www.linkedin.com/in/subham-yadav-3493711a5/?originalSubdomain=in).

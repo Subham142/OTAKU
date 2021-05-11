@@ -18,7 +18,6 @@ An online e-commerce site to buy manga.
 - Mark orders as a delivered option
 - Checkout process (shipping, payment method, etc)
 - PayPal / credit card integration
-- Database seeder (products & users)
 - Chatbot
 
 Deployed at Heroku

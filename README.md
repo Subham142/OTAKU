@@ -22,6 +22,15 @@ An online e-commerce site to buy manga.
 
 Deployed at Heroku
 
+## Some ScreenShots
+
+![WhatsApp Image 2021-05-10 at 20 06 20](https://user-images.githubusercontent.com/64212940/117679122-9ddf4800-b1cd-11eb-98ec-36d48a1ac978.jpeg)
+
+![WhatsApp Image 2021-05-10 at 20 06 20 (1)](https://user-images.githubusercontent.com/64212940/117678996-86a05a80-b1cd-11eb-806a-e3fc8bcb8d3a.jpeg)
+
+![WhatsApp Image 2021-05-10 at 20 06 22](https://user-images.githubusercontent.com/64212940/117679188-acc5fa80-b1cd-11eb-9d47-7476e978956f.jpeg)
+
+
 ## Tech Stack Used
 ### Frontend
 React with Functional Components & Hooks
@@ -95,13 +104,7 @@ npm run build
 
 There is a Heroku postbuild script, so if you push to Heroku, no need to build manually for deployment to Heroku
 
-## Some ScreenShots
 
-![WhatsApp Image 2021-05-10 at 20 06 20](https://user-images.githubusercontent.com/64212940/117679122-9ddf4800-b1cd-11eb-98ec-36d48a1ac978.jpeg)
-
-![WhatsApp Image 2021-05-10 at 20 06 20 (1)](https://user-images.githubusercontent.com/64212940/117678996-86a05a80-b1cd-11eb-806a-e3fc8bcb8d3a.jpeg)
-
-![WhatsApp Image 2021-05-10 at 20 06 22](https://user-images.githubusercontent.com/64212940/117679188-acc5fa80-b1cd-11eb-9d47-7476e978956f.jpeg)
 
 ## Contribution
 

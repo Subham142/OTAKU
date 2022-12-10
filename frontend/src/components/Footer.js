@@ -1,10 +1,6 @@
 import React from "react";
 import "./footer.css";
 import Logo from '../pics/logo.png'
-//import "bootstrap/dist/css/bootstrap.min.css";
-//import "font-awesome/css/font-awesome.min.css";
-//import Logo from "../kurakoo-logo.png";
-
 function Footer() {
     return (
         <footer className="footer-section">

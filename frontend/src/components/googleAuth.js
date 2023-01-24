@@ -1,45 +1,45 @@
-import React,{useState} from 'react';
-import { GoogleLogin } from 'react-google-login';
+import { GoogleLogin } from '@react-oauth/google';
+import jwt_decode from "jwt-decode";
 import axios from "axios";
 import { login,register } from "../actions/userActions";
 import { useDispatch } from "react-redux";
 import config from "../config.json"
-
-
 const clientId=config.GOOGLE_CLIENT_ID
 
 function Login() {
       
   const dispatch = useDispatch()
-  
-  
-    const onSuccess = async (res) => {
-    const user= res.profileObj;
-    const {name ,email} =user;
-     const password= config.AUTH_PASSWORD; 
-     const {data} = await axios.get(`/api/users/googleauth/${email}`)
-        if( data.isPresent){
+
+  async function check(email,name,password) {
+    const {data} = await axios.get(`/api/users/googleauth/${email}`)
+    // console.log(data)
+    if( data.isPresent){
       dispatch(login(email, password))
     }else{
       dispatch(register(name, email, password))
     }
-     };
+  }
 
-  const onFailure = (res) => {
-    console.log('Login failed: res:', res); 
-   };
-
-  return (
+ return (
     <div>
-       <GoogleLogin
-        clientId={clientId}
-         buttonText="Sign In/Sign Up"
-        onSuccess={onSuccess}
-        onFailure={onFailure}
-        cookiePolicy={'single_host_origin'}
-        style={{ marginTop: '100px' }}
-        //isSignedIn={true}
-      />
+    <GoogleLogin
+    onSuccess= {credentialResponse => {
+    // console.log(credentialResponse.credential);
+    var decoded = jwt_decode(credentialResponse.credential);
+    // console.log(decoded)
+    const {name ,email} =decoded;
+    // console.log(name)
+    const password= config.AUTH_PASSWORD; 
+    
+    check(email,name,password)
+    
+  
+  }}
+  onError={() => {
+    console.log('Login Failed');
+  }}
+/>
+
     </div>
   );
 }

@@ -62,7 +62,7 @@ const LoginScreen = ({ location, history }) => {
         <Button type='submit' variant='primary'>
           Sign In
         </Button>
-        <Button variant="link" disabled>Or</Button>
+        {/* <Button variant="link" disabled>Or</Button> */}
       <Button variant="link"><GoogleAuth/></Button>
  
      

@@ -10,15 +10,7 @@ function Login() {
       
   const dispatch = useDispatch()
 
-  async function check(email,name,password) {
-    const {data} = await axios.get(`/api/users/googleauth/${email}`)
-    // console.log(data)
-    if( data.isPresent){
-      dispatch(login(email, password))
-    }else{
-      dispatch(register(name, email, password))
-    }
-  }
+ 
 
  return (
     <div>
@@ -31,6 +23,15 @@ function Login() {
     // console.log(name)
     const password= config.AUTH_PASSWORD; 
     
+    async function check(email,name,password) {
+      const {data} = await axios.get(`/api/users/googleauth/${email}`)
+      // console.log(data)
+      if( data.isPresent){
+        dispatch(login(email, password))
+      }else{
+        dispatch(register(name, email, password))
+      }
+    }
     check(email,name,password)
     
   
